@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Validação de email</title>
+  </head>
+  <body>
+    <div class="div-title">
+      <h1>Validação de email para Gmail, Hotmail e Outlook</h1>
+    </div>
+    <div class="content">
+      <div class="div-email">
+        <div class="email-invalid">
+          <input
+            id="email"
+            onblur="validaEmail(event)"
+            type="text"
+            placeholder="Digite aqui seu email"
+          />
+        </div>
+        <div class="div-alert">
+          <span class="alert-invalid">Email inválido ou campo vazio!</span>
+        </div>
+      </div>
+      <img src="./assets/email.svg" alt="" />
+    </div>
+    <script src="./validateEmail.js"></script>
+  </body>
+</html>
