@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./styles/style.css" />
     <title>Validação de email</title>
   </head>
@@ -15,13 +19,20 @@
         <div class="email-invalid">
           <input
             id="email"
-            onblur="validaEmail(event)"
+            oninput="validaEmail(event)"
             type="text"
             placeholder="Digite aqui seu email"
           />
         </div>
         <div class="div-alert">
-          <span class="alert-invalid">Email inválido ou campo vazio!</span>
+          <span class="alert-invalid">
+            Email inválido ou campo vazio!
+            <i class="fa fa-times" aria-hidden="true"></i>
+          </span>
+          <span class="alert-valid">
+            Email valido
+            <i class="fa fa-check" aria-hidden="true"></i>
+          </span>
         </div>
       </div>
       <img src="./assets/email.svg" alt="" />

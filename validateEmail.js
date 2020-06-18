@@ -1,4 +1,5 @@
 const alertSpan = document.querySelector(".alert-invalid");
+const alertSpanValid = document.querySelector(".alert-valid");
 const inputEmail = document.querySelector(".email-invalid");
 
 const regexGmail = /@gmail\.com$/;
@@ -11,19 +12,28 @@ function validaEmail(event) {
     String(event.target.value).toLowerCase()
   );
   if (verificaEmailValido == false) {
+    alertSpanValid.classList.remove("alert-valid-active");
+    inputEmail.classList.remove("email-valid-active");
     alertSpan.classList.add("alert-invalid-active");
     inputEmail.classList.add("email-invalid-active");
   } else {
     alertSpan.classList.remove("alert-invalid-active");
     inputEmail.classList.remove("email-invalid-active");
+
+    alertSpanValid.classList.add("alert-valid-active");
+    inputEmail.classList.add("email-valid-active");
   }
 
   if (event.target.value.length === 0) {
+    alertSpanValid.classList.remove("alert-valid-active");
+    inputEmail.classList.remove("email-valid-active");
     alertSpan.classList.add("alert-invalid-active");
     inputEmail.classList.add("email-invalid-active");
   } else {
     alertSpan.classList.remove("alert-invalid-active");
     inputEmail.classList.remove("email-invalid-active");
+    alertSpanValid.classList.add("alert-valid-active");
+    inputEmail.classList.add("email-invalid-active");
   }
 
   const gmail = regexGmail.test(event.target.value);
@@ -31,10 +41,14 @@ function validaEmail(event) {
   const outlook = regexOutlook.test(event.target.value);
 
   if (gmail == false && hotmail == false && outlook == false) {
+    alertSpanValid.classList.remove("alert-valid-active");
+    inputEmail.classList.remove("email-valid-active");
     alertSpan.classList.add("alert-invalid-active");
     inputEmail.classList.add("email-invalid-active");
   } else {
     alertSpan.classList.remove("alert-invalid-active");
     inputEmail.classList.remove("email-invalid-active");
+    alertSpanValid.classList.add("alert-valid-active");
+    inputEmail.classList.add("email-valid-active");
   }
 }
