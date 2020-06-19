@@ -17,4 +17,4 @@ Validation of email for providers free(Gmail, Hotmail and Outlook) with Javascri
 ![image-valid-input-email](https://user-images.githubusercontent.com/54339869/84964799-737f2a80-b0e3-11ea-90d0-957818feeba9.png)
 
 
-- Make by Leonardo Flores with Javascript
+- Made by Leonardo Flores with Javascript
